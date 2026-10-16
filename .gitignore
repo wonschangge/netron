@@ -5,6 +5,8 @@
 .ruff_cache
 .specify
 .yarn
+atlas/data/*
+atlas/onnx-operator-atlas.html
 dist/*
 node_modules/*
 test-results/*

@@ -9,6 +9,20 @@ Netron supports ONNX, TensorFlow Lite, PyTorch, torch.export, ExecuTorch, TorchS
 
 Netron has experimental support for MLIR, JAX, GGUF, RKNN, ncnn, MNN, PaddlePaddle and scikit-learn.
 
+## Fork additions
+
+This fork (`wonschangge/netron`) adds **ONNX Operator Atlas** — an interactive explorer for the ONNX
+operator metadata in `source/onnx-metadata.json` (opset evolution, per-operator version diffs,
+operator × element-type matrix, side-by-side version comparison).
+
+ * **Atlas**: [**Open**](https://wonschangge.github.io/netron/atlas/) the browser version
+ * **Single file**: [download](https://wonschangge.github.io/netron/atlas/onnx-operator-atlas.html) and open it offline
+ * **Source**: [`atlas/`](atlas) — built by `node package.js build web` into `dist/web/atlas/`,
+   published together with the web app by `.github/workflows/pages.yml`
+
+The atlas is independent of the Netron UI: both are built from the same metadata file and deployed
+to the same Pages site. See [`atlas/AGENTS.md`](atlas/AGENTS.md) for data facts and design notes.
+
 <p align='center'><a href='https://www.lutzroeder.com/ai'><img src='.github/screenshot.png' width='800'></a></p>
 
 ## Install

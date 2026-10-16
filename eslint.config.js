@@ -2,6 +2,7 @@
 export default [
     {
         ignores: [
+            'atlas/**',
             'dist/**',
             'third_party/**',
         ]

@@ -20,6 +20,7 @@
         "install": "node package.js install",
         "lint": "node package.js lint",
         "build": "node package.js build",
+        "atlas": "node package.js build atlas",
         "publish": "node package.js publish",
         "release": "node package.js release",
         "test": "node package.js test",

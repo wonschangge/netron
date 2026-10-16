@@ -264,6 +264,12 @@ const build = async (target) => {
                 return p1 + configuration.date + p3;
             });
             await fs.writeFile(contentFile, content, 'utf-8');
+            await build('atlas');
+            break;
+        }
+        case 'atlas': {
+            writeLine('build atlas');
+            await exec('node atlas/build.js');
             break;
         }
         case 'electron': {

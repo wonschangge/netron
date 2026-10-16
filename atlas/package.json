@@ -1,0 +1,14 @@
+{
+    "name": "onnx-operator-atlas",
+    "version": "1.0.0",
+    "private": true,
+    "type": "module",
+    "description": "Standalone interactive explorer for the ONNX operator metadata used by Netron",
+    "scripts": {
+        "data": "node build-data.js",
+        "bundle": "node bundle.js",
+        "build": "node build.js",
+        "verify": "node verify.js",
+        "serve": "python3 -m http.server 8080"
+    }
+}

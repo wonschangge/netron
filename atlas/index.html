@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>ONNX Operator Atlas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app">
+        <header class="topbar">
+            <div class="brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                    <path d="M5 6.5 L12 12 L19 6.5" stroke="#4c8dff" stroke-width="1.4"/>
+                    <path d="M5 17.5 L12 12 L19 17.5" stroke="#34d399" stroke-width="1.4"/>
+                    <circle cx="5" cy="6.5" r="2.4" fill="#0b0e14" stroke="#4c8dff" stroke-width="1.4"/>
+                    <circle cx="19" cy="6.5" r="2.4" fill="#0b0e14" stroke="#4c8dff" stroke-width="1.4"/>
+                    <circle cx="5" cy="17.5" r="2.4" fill="#0b0e14" stroke="#34d399" stroke-width="1.4"/>
+                    <circle cx="19" cy="17.5" r="2.4" fill="#0b0e14" stroke="#34d399" stroke-width="1.4"/>
+                    <circle cx="12" cy="12" r="2.8" fill="#0b0e14" stroke="#fbbf24" stroke-width="1.4"/>
+                </svg>
+                <span>
+                    ONNX Operator Atlas
+                    <span class="brand-sub">spec explorer</span>
+                </span>
+            </div>
+
+            <label class="search">
+                <span class="search-icon" aria-hidden="true">
+                    <svg width="13" height="13" viewBox="0 0 16 16" fill="none">
+                        <circle cx="7" cy="7" r="4.6" stroke="currentColor" stroke-width="1.5"/>
+                        <path d="M10.6 10.6 L14 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                <input id="search" type="search" placeholder="Search operators, attributes, descriptions…" autocomplete="off" spellcheck="false">
+                <kbd>/</kbd>
+            </label>
+
+            <nav class="tabs" id="tabs"></nav>
+            <span class="spacer"></span>
+
+            <div class="opset-picker">
+                <span>Target</span>
+                <select id="opset" title="Show each operator as it exists at this opset version"></select>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-filters" id="filters"></div>
+            <div class="list-head">
+                <span id="list-count">…</span>
+                <select id="sort" title="Sort the catalog"></select>
+            </div>
+            <div class="op-list" id="op-list"></div>
+            <div id="sidebar-foot" style="padding:8px 12px;border-top:1px solid var(--line)"></div>
+        </aside>
+
+        <main class="main" id="main"></main>
+    </div>
+
+    <script src="data/onnx-metadata.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/treemap.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/overview.js"></script>
+    <script src="js/detail.js"></script>
+    <script src="js/matrix.js"></script>
+    <script src="js/compare.js"></script>
+    <script src="js/catalog.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
